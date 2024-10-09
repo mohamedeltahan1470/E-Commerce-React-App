@@ -1,0 +1,37 @@
+.breadcrum {
+    display: flex;
+    flex-wrap: wrap; /* Allow the breadcrumb to wrap on smaller screens */
+    align-items: center;
+    gap: 8px; /* Add space between text and icons */
+    font-size: 18px; /* Set a base font size */
+    color: #333; /* Default text color */
+    padding: 10px 20px; /* Add padding for better spacing */
+}
+
+/* Styling for the arrow icons */
+.breadcrum img {
+    width: 10px; /* Set a reasonable size for the icon */
+    height: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .breadcrum {
+        font-size: 16px; /* Adjust font size for tablets */
+    }
+
+    .breadcrum img {
+        width: 8px; /* Adjust the size of the icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrum {
+        font-size: 14px; /* Further adjust font size for mobile devices */
+        gap: 5px; /* Reduce the gap between items */
+    }
+
+    .breadcrum img {
+        width: 6px; /* Further reduce icon size */
+    }
+}

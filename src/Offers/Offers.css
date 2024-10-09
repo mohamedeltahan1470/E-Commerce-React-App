@@ -1,44 +1,95 @@
-.offers{
-    width: 65%;
-    height: 60vh;
+.offers {
+    height: auto; /* Adjust height for content */
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
-    margin: auto;
-    padding: 0px 140px ;
-    margin-bottom: 150px;
-    background: linear-gradient(180deg, #fde1ff 0% , #e1ffea22 60%);
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    padding: 20px; /* Add padding for better layout */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center component */
 }
-.offers-left{
-    flex: 1;
+
+.offers-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center; /* Center text */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space below */
 }
-.offers-left h1{
+
+.offers-left h2 {
+    color: #090909;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.offers-left p {
     color: #171717;
-    font-size: 80px;
-    font-weight: 600;
+    font-size: 1.2rem;
 }
-.offers-left p{
-    color: #171717;
-    font-size: 22px;
-    font-weight: 600;
-}
-.offers-left button{
-    width: 282px;
-    height: 70px;
-    border-radius: 35px;
-    background: #ff4141;
-    border: none;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 30px;
-    cursor: pointer;
-}
-.offers-right{
-    flex: 1;
+
+.offers-check-btn {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-top: 50px;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #ff4141;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.offers-check-btn:hover {
+    background: #e03a3a;
+}
+
+.offers-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Space below */
+}
+
+.offers-right img {
+    width: 100%;
+    max-width: 500px; /* Limit max width */
+    height: auto;
+}
+
+.popular-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px; /* Padding for popular items */
+}
+
+/* Each item should take full width on small screens */
+.popular-item > .item {
+    flex: 1 1 200px;
+    max-width: calc(33.33% - 30px); /* 3 items per row on large screens */
+    text-align: center; /* Center text inside items */
+}
+
+.popular-item img {
+    width: 100%;
+    height: auto; /* Responsive image */
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .popular-item > .item {
+        max-width: calc(50% - 20px); /* 2 items per row on tablets */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .popular-item > .item {
+        max-width: calc(100% - 20px); /* Full width for each item */
+    }
 }

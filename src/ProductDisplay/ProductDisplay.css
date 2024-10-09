@@ -1,0 +1,117 @@
+.productdisplay {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: auto; /* Adjust height to content */
+}
+
+.productdisplay-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.productdisplay-img-list {
+    display: flex;
+    gap: 10px;
+}
+
+.productdisplay-img-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.productdisplay-img {
+    display: flex;
+    justify-content: center;
+}
+
+.productdisplay-main-img {
+    width: 100%;
+    max-width: 500px; /* Limit max size of the main image */
+    height: auto;
+}
+
+.productdisplay-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.productdisplay-right h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.productdisplay-right-star {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.productdisplay-right-star img {
+    width: 20px;
+    height: 20px;
+}
+
+.productdisplay-right-star p {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .productdisplay {
+        flex-direction: column; /* Stack the layout vertically on tablets */
+    }
+
+    .productdisplay-left {
+        align-items: center;
+    }
+
+    .productdisplay-img-list img {
+        width: 60px; /* Scale down thumbnail images */
+        height: 60px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 28px; /* Decrease font size for smaller screens */
+    }
+
+    .productdisplay-right-star img {
+        width: 18px;
+        height: 18px; /* Adjust star icons size */
+    }
+}
+
+@media (max-width: 480px) {
+    .productdisplay-left {
+        align-items: center;
+    }
+
+    .productdisplay-img-list {
+        gap: 5px; /* Reduce gap for mobile screens */
+    }
+
+    .productdisplay-img-list img {
+        width: 50px; /* Further scale down thumbnail images */
+        height: 50px;
+    }
+
+    .productdisplay-main-img {
+        max-width: 300px; /* Limit main image size on smaller screens */
+    }
+
+    .productdisplay-right h1 {
+        font-size: 24px; /* Further decrease font size */
+    }
+
+    .productdisplay-right-star img {
+        width: 16px;
+        height: 16px;
+    }
+}

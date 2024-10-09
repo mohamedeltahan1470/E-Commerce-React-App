@@ -1,24 +1,61 @@
-.new-collections{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 100px;
+.new-collections {
+    text-align: center; /* مركزية النص */
+    padding: 20px; /* إضافة حشوة للجزء العلوي والسفلي */
+    margin: 0 auto;
+    max-width: 1200px; /* الحد الأقصى لعرض المكون */
 }
-.new-collections h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
+
+.new-collections h1 {
+    font-size: 2.5rem;
+    color: #090909;
+    margin-bottom: 20px;
 }
-.new-collections hr{
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background:#252525;
+
+.new-collections hr {
+    width: 60%;
+    margin: 0 auto 40px;
+    border: 1px solid #e1e1e1;
 }
-.collections{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 50px;
-    gap: 30px;
+
+.collections {
+    display: flex; /* استخدام الفليكس لتوزيع العناصر */
+    flex-wrap: wrap; /* السماح للعناصر بالتفاف */
+    justify-content: center; /* مركزية العناصر */
+    margin: 20px 0; /* مسافة عمودية */
+    gap: 20px; /* إضافة فجوة بين العناصر */
+}
+
+/* تنسيق العناصر */
+.collections > * {
+    flex: 1 0 100%; /* 100% في الأجهزة الصغيرة */
+    max-width: 100%; /* التأكد من عدم تجاوز هذا العرض */
+}
+
+/* وسائل الإعلام للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .collections > * {
+        flex: 1 0 100%; /* كل عنصر يأخذ 100% في الشاشات الصغيرة */
+        max-width: 100%; /* تأكيد العرض الكامل */
+    }
+}
+
+@media (min-width: 480px) {
+    .collections > * {
+        flex: 1 0 48%; /* عرض عنصرين في الصف */
+        max-width: 48%; /* التأكد من عدم تجاوز هذا العرض */
+    }
+}
+
+@media (min-width: 768px) {
+    .collections > * {
+        flex: 1 0 30%; /* عرض 3 عناصر في الصف */
+        max-width: 30%; /* التأكد من عدم تجاوز هذا العرض */
+    }
+}
+
+@media (min-width: 1024px) {
+    .collections > * {
+        flex: 1 0 22%; /* عرض 4 عناصر في الصف */
+        max-width: 22%; /* التأكد من عدم تجاوز هذا العرض */
+    }
 }

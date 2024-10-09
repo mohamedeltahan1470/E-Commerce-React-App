@@ -8,7 +8,7 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Shop = () => {
   return (
-    <div >
+    <div style={{alignItems:"center" , display:""}}>
         <Hero/>
         <Popular/>
         <Offers/>

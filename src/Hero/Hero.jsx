@@ -4,7 +4,8 @@ import React from 'react';
 import './Hero.css';
 import hand_icon from "../Assets/hand_icon.png";
 import arrow_icon from "../Assets/arrow.png";
-import hero_img from "../Assets/hero_image.png";
+import hero_img from "../Assets/books/logo2.jpeg";
+import logo from "../Assets/books/logo.png";
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
             </div>
         </div>
         <div className="hero-right">
-            <img src={hero_img} alt="Hero Image" />
+            <img src={logo} alt="Hero Image" />
         </div>
     </div>
   );

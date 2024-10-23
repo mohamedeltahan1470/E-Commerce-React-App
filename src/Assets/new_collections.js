@@ -1,11 +1,11 @@
-import p1_img from "./product_12.png";
-import p2_img from "./product_35.png";
-import p3_img from "./product_14.png";
-import p4_img from "./product_8.png";
-import p5_img from "./product_15.png";
-import p6_img from "./product_2.png";
-import p7_img from "./product_17.png";
-import p8_img from "./product_28.png";
+import p1_img from "./books/image4.jpg";
+import p2_img from "./books/image5.webp";
+import p3_img from "./books/image6.jpg";
+import p4_img from "./books/image7.jpg";
+import p5_img from "./books/image8.jpeg";
+import p6_img from "./books/image9.webp";
+import p7_img from "./books/images.jpg";
+import p8_img from "./books/image6.jpg";
 
 let new_collections = [
   {

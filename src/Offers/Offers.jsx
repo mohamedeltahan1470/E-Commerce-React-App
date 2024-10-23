@@ -2,9 +2,9 @@
 
 import React from 'react';
 import "./Offers.css";
-import exclucive_image from "../Assets/exclusive_image.png";
+import exclucive_image from "../Assets/books/logo.png";
 import arrow_icon from "../Assets/arrow.png"; // Include an arrow icon if needed
-
+import logo2 from "../Assets/books/logo2.jpeg"
 const Offers = () => {
   return (
     <div className='offers'>
@@ -18,7 +18,7 @@ const Offers = () => {
         </div>
       </div>
       <div className="offers-right">
-        <img src={exclucive_image} alt="Exclusive Offers" />
+        <img src={logo2} alt="Exclusive Offers" />
       </div>
     </div>
   );

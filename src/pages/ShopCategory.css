@@ -149,3 +149,47 @@
     transition: background-color 0.3s ease;
     width: fit-content; /* Ensure button width adjusts to content */
 }
+/* تنسيق الرئيسي لقسم المنتجات */
+.Shopcategory-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* استخدام الشبكة المرنة */
+    gap: 20px; /* مسافة بين العناصر */
+    margin: 20px 5%; /* تحكم في الهوامش */
+    justify-items: center; /* تأكد من أن العناصر في وسط الخلايا */
+}
+
+/* تحسين التصميم للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .Shopcategory-products {
+        grid-template-columns: repeat(4, 1fr); /* عرض 4 أعمدة على الشاشات الكبيرة */
+    }
+}
+
+/* تحسين التصميم للأجهزة اللوحية (تابلت) */
+@media (max-width: 768px) {
+    .Shopcategory-products {
+        grid-template-columns: repeat(2, 1fr); /* عرض عمودين على الشاشات المتوسطة */
+    }
+}
+
+/* تحسين التصميم للهواتف المحمولة */
+@media (max-width: 480px) {
+    .Shopcategory-products {
+        grid-template-columns: 1fr; /* عرض عنصر واحد في كل صف على الشاشات الصغيرة */
+        gap: 15px; /* تقليل الفجوة بين العناصر للهواتف المحمولة */
+    }
+}
+
+/* تحسين تصميم العناصر الفردية */
+.Shopcategory-products .item {
+    background-color: #fff; /* خلفية المنتج */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    border-radius: 10px; /* حواف مستديرة */
+    text-align: center;
+    transition: transform 0.3s ease; /* تأثير الحركة عند التحويم */
+}
+
+.Shopcategory-products .item:hover {
+    transform: translateY(-5px); /* تحريك المنتج قليلاً عند التحويم */
+}

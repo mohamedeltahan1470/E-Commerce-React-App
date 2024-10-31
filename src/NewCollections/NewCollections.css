@@ -1,8 +1,8 @@
 .new-collections {
-    text-align: center; /* مركزية النص */
-    padding: 20px; /* إضافة حشوة للجزء العلوي والسفلي */
+    padding: 20px;
+    text-align: center;
     margin: 0 auto;
-    max-width: 1200px; /* الحد الأقصى لعرض المكون */
+    max-width: 1200px;
 }
 
 .new-collections h1 {
@@ -18,87 +18,67 @@
 }
 
 .collections {
-    display: flex; /* استخدام الفليكس لتوزيع العناصر */
-    flex-wrap: wrap; /* السماح للعناصر بالتفاف */
-    justify-content: center; /* مركزية العناصر */
-    margin: 20px 0; /* مسافة عمودية */
-    gap: 20px; /* إضافة فجوة بين العناصر */
+    display: grid;  
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 }
 
-/* تنسيق العناصر */
 .collections > * {
-    flex: 1 0 100%; /* 100% في الأجهزة الصغيرة */
-    max-width: 100%; /* التأكد من عدم تجاوز هذا العرض */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
 }
 
-/* وسائل الإعلام للشاشات الصغيرة */
+.collections > *:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+    .new-collections h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .new-collections h1 {
+        font-size: 2rem;
+    }
+    .new-collections hr {
+        width: 70%;
+    }
+}
+
 @media (max-width: 768px) {
-    .collections > * {
-        flex: 1 0 100%; /* كل عنصر يأخذ 100% في الشاشات الصغيرة */
-        max-width: 100%; /* تأكيد العرض الكامل */
+    .new-collections {
+        padding: 15px;
+    }
+    .new-collections h1 {
+        font-size: 1.8rem;
+    }
+    .new-collections hr {
+        width: 80%;
     }
 }
 
-@media (min-width: 480px) {
-    .collections > * {
-        flex: 1 0 48%; /* عرض عنصرين في الصف */
-        max-width: 48%; /* التأكد من عدم تجاوز هذا العرض */
+@media (max-width: 600px) {
+    .collections {
+        grid-template-columns: 1fr; 
     }
-}
-
-@media (min-width: 768px) {
     .collections > * {
-        flex: 1 0 30%; /* عرض 3 عناصر في الصف */
-        max-width: 30%; /* التأكد من عدم تجاوز هذا العرض */
-    }
-}
-
-@media (min-width: 1024px) {
-    .collections > * {
-        flex: 1 0 22%; /* عرض 4 عناصر في الصف */
-        max-width: 22%; /* التأكد من عدم تجاوز هذا العرض */
-    }
-}
-
-.collections {
-    display: flex; /* استخدام الفليكس لتوزيع العناصر */
-    flex-wrap: wrap; /* السماح للعناصر بالتفاف */
-    justify-content: center; /* مركزية العناصر */
-    margin: 20px 0; /* مسافة عمودية */
-    gap: 20px; /* إضافة فجوة بين العناصر */
-}
-
-/* تحديد حجم ثابت لكل عنصر */
-.collections > * {
-    flex: 1 0 22%; /* عرض العناصر */
-    max-width: 22%; /* التأكد من عدم تجاوز العرض */
-    height: 300px; /* ارتفاع ثابت */
-    overflow: hidden; /* منع تجاوز المحتوى */
-    position: relative; /* لتحديد مكان العناصر بداخل العنصر */
-}
-
-/* لجعل الصور تتناسب بشكل صحيح */
-.collections img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* لجعل الصورة تتناسب مع العنصر */
-}
-
-/* وسائل الإعلام للشاشات الصغيرة */
-@media (max-width: 768px) {
-    .collections > * {
-        flex: 1 0 48%; /* عرض عنصرين في الصف */
-        max-width: 48%; /* التأكد من عدم تجاوز العرض */
-        height: 200px; /* ارتفاع مناسب للشاشات الصغيرة */
+        height: auto; 
     }
 }
 
 @media (max-width: 480px) {
-    .collections > * {
-        flex: 1 0 100%; /* عرض عنصر واحد في الصف */
-        max-width: 100%; /* التأكد من عدم تجاوز العرض */
-        height: 200px; /* ارتفاع مناسب للشاشات الصغيرة */
+    .new-collections h1 {
+        font-size: 1.6rem; 
+    }
+    .new-collections hr {
+        width: 90%; 
     }
 }
-
-

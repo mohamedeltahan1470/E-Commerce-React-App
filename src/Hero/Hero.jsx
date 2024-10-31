@@ -1,11 +1,7 @@
-
-
 import React from 'react';
 import './Hero.css';
-import hand_icon from "../Assets/hand_icon.png";
 import arrow_icon from "../Assets/arrow.png";
-import hero_img from "../Assets/books/logo2.jpeg";
-import logo from "../Assets/books/logo.png";
+import hero_img from "../Assets/New folder/product_16.png";
 
 const Hero = () => {
   return (
@@ -15,7 +11,7 @@ const Hero = () => {
             <div className="hero-collections">
                 <div className="hero-hand-icon">
                     <p>New</p>
-                    <img src={hand_icon} alt="Hand Icon" />
+                    <img src={hero_img} alt="Hand Icon" />
                 </div>
                 <p>Collections</p>
                 <p>For Everyone</p>
@@ -26,7 +22,7 @@ const Hero = () => {
             </div>
         </div>
         <div className="hero-right">
-            <img src={logo} alt="Hero Image" />
+            <img src={hero_img} alt="Hero Image" />
         </div>
     </div>
   );

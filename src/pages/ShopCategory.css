@@ -9,20 +9,20 @@
 .shopcategory-banner {
     display: block;
     margin: 30px auto;
-    width: 90%; /* Adjusted for better responsiveness */
-    max-width: 1200px; /* Set a maximum width */
+    width: 90%;
+    max-width: 1200px;
 }
 
 .shopcategory-indexSort {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%; /* Centering the index sort section */
-    margin: 20px 0; /* Adjusted margin */
+    width: 90%;
+    margin: 20px 0;
 }
 
 .shopcategory-indexSort p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .shopcategory-sort {
@@ -34,16 +34,24 @@
 }
 
 .shopcategory-sort:hover {
-    background-color: #f0f0f0; /* Change background on hover */
+    background-color: #f0f0f0;
 }
 
-.Shopcategory-products {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row if there's not enough space */
-    justify-content: center; /* Center items horizontally */
-    gap: 30px; /* Add space between items */
-    margin: 20px 5%; /* Adjusted margin for better spacing */
+
+.shopcategory-products {
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    margin: 20px 5%;
+    justify-content: center;
 }
+
+
+.shopcategory-products > div {
+    flex: 1 1 200px;
+    max-width: 200px; 
+}
+
 
 .shopcategory-loadmore {
     display: flex;
@@ -56,140 +64,69 @@
     color: #787878;
     font-size: 18px;
     font-weight: 500;
-    cursor: pointer; /* Add pointer cursor */
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    width: fit-content;
 }
 
 .shopcategory-loadmore:hover {
-    background-color: #dcdcdc; /* Lighter on hover */
+    background-color: #dcdcdc;
 }
 
-/* Tablet Screen Adjustments */
-@media (max-width: 768px) {
-    .shopcategory-indexSort {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: flex-start; /* Align to start */
-    }
 
+@media (max-width: 1200px) {
     .shopcategory-indexSort p {
-        font-size: 16px; /* Adjust font size for tablets */
+        font-size: 1.5rem;
     }
 
-    .shopcategory-sort {
-        width: 100%; /* Full width for sort dropdown */
-        text-align: center; /* Center text */
-    }
-
-    .shopcategory-loadmore {
-        font-size: 16px; /* Adjust font size for tablets */
-    }
-
-    .Shopcategory-products {
-        gap: 20px; /* Smaller gap for tablets */
+    .shopcategory-products > div {
+        max-width: 250px; 
     }
 }
 
-/* Mobile Screen Adjustments */
+@media (max-width: 1024px) {
+    .shopcategory-indexSort {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shopcategory-sort {
+        width: 100%;
+        text-align: center;
+    }
+
+    .shopcategory-loadmore {
+        font-size: 16px;
+    }
+
+    .shopcategory-products > div {
+        max-width: 200px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .shopcategory-indexSort {
+        font-size: 14px;
+    }
+
+    .shopcategory-products > div {
+        flex: 1 1 150px;
+        max-width: 150px; 
+    }
+}
+
 @media (max-width: 480px) {
     .shopcategory-indexSort {
-        font-size: 14px; /* Smaller font for mobile */
+        font-size: 12px;
     }
 
     .shopcategory-sort {
-        padding: 8px 15px; /* Adjust padding */
-    }
-
-    .Shopcategory-products {
-        flex-direction: column; /* Make items stack vertically on small screens */
-        gap: 10px; /* Reduced gap */
-        margin: 0 5%; /* Adjusted margin for better spacing */
+        padding: 8px 15px;
     }
 
     .shopcategory-loadmore {
-        width: 100%; /* Full width button */
-        padding: 10px; /* Adjusted padding */
-        font-size: 14px; /* Smaller font size */
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
     }
-}
-
-.shopcategory-indexSort {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%; /* Centering the index sort section */
-    margin: 20px 0; /* Adjusted margin */
-    text-align: center; /* Center the text */
-}
-
-.shopcategory-indexSort p {
-    margin: 0; /* Remove default margin */
-    flex: 1; /* Allow p to grow and center the content */
-}
-
-.shopcategory-sort {
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: 1px solid #888;
-    cursor: pointer;
-    text-align: center; /* Center text in sort dropdown */
-}
-
-.shopcategory-loadmore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
-    padding: 15px 30px;
-    border-radius: 75px;
-    background: #ededed;
-    color: #787878;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer; /* Add pointer cursor */
-    transition: background-color 0.3s ease;
-    width: fit-content; /* Ensure button width adjusts to content */
-}
-/* تنسيق الرئيسي لقسم المنتجات */
-.Shopcategory-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* استخدام الشبكة المرنة */
-    gap: 20px; /* مسافة بين العناصر */
-    margin: 20px 5%; /* تحكم في الهوامش */
-    justify-items: center; /* تأكد من أن العناصر في وسط الخلايا */
-}
-
-/* تحسين التصميم للشاشات الكبيرة */
-@media (min-width: 1024px) {
-    .Shopcategory-products {
-        grid-template-columns: repeat(4, 1fr); /* عرض 4 أعمدة على الشاشات الكبيرة */
-    }
-}
-
-/* تحسين التصميم للأجهزة اللوحية (تابلت) */
-@media (max-width: 768px) {
-    .Shopcategory-products {
-        grid-template-columns: repeat(2, 1fr); /* عرض عمودين على الشاشات المتوسطة */
-    }
-}
-
-/* تحسين التصميم للهواتف المحمولة */
-@media (max-width: 480px) {
-    .Shopcategory-products {
-        grid-template-columns: 1fr; /* عرض عنصر واحد في كل صف على الشاشات الصغيرة */
-        gap: 15px; /* تقليل الفجوة بين العناصر للهواتف المحمولة */
-    }
-}
-
-/* تحسين تصميم العناصر الفردية */
-.Shopcategory-products .item {
-    background-color: #fff; /* خلفية المنتج */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
-    border-radius: 10px; /* حواف مستديرة */
-    text-align: center;
-    transition: transform 0.3s ease; /* تأثير الحركة عند التحويم */
-}
-
-.Shopcategory-products .item:hover {
-    transform: translateY(-5px); /* تحريك المنتج قليلاً عند التحويم */
 }

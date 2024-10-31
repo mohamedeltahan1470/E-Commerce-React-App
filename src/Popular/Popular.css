@@ -18,29 +18,44 @@
 }
 
 .popular-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: stretch;
 }
 
-/* Each item should take full width on small screens */
 .popular-item > * {
-    flex: 1 1 200px;
-    max-width: calc(33.33% - 30px); /* 3 items per row on large screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff;
 }
 
-/* Tablet View */
+.popular-item > *:hover {
+    transform: translateY(-5px);
+}
+
 @media (max-width: 1024px) {
-    .popular-item > * {
-        max-width: calc(50% - 20px); /* 2 items per row on tablets */
+    .popular h1 {
+        font-size: 2rem;
+    }
+    .popular hr {
+        width: 70%;
     }
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
-    .popular-item > * {
-        max-width: calc(100% - 20px); /* Full width for each item */
+    .popular {
+        padding: 15px;
+    }
+    .popular h1 {
+        font-size: 1.8rem;
+    }
+    .popular hr {
+        width: 80%;
     }
 }

@@ -1,20 +1,20 @@
 .offers {
-    height: auto; /* Adjust height for content */
     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center content */
-    padding: 20px; /* Add padding for better layout */
-    max-width: 1200px; /* Limit max width */
-    margin: 0 auto; /* Center component */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .offers-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center text */
-    text-align: center; /* Center text */
-    margin-bottom: 20px; /* Space below */
+    align-items: flex-start;
+    margin-right: 20px;
 }
 
 .offers-left h2 {
@@ -47,49 +47,32 @@
 }
 
 .offers-right {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-bottom: 20px; /* Space below */
+    margin-left: 20px;
 }
 
 .offers-right img {
     width: 100%;
-    max-width: 500px; /* Limit max width */
+    max-width: 500px;
     height: auto;
 }
 
-.popular-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 20px; /* Padding for popular items */
-}
-
-/* Each item should take full width on small screens */
-.popular-item > .item {
-    flex: 1 1 200px;
-    max-width: calc(33.33% - 30px); /* 3 items per row on large screens */
-    text-align: center; /* Center text inside items */
-}
-
-.popular-item img {
-    width: 100%;
-    height: auto; /* Responsive image */
-}
-
-/* Tablet View */
-@media (max-width: 1024px) {
-    .popular-item > .item {
-        max-width: calc(50% - 20px); /* 2 items per row on tablets */
-    }
-}
-
-/* Mobile View */
 @media (max-width: 768px) {
-    .popular-item > .item {
-        max-width: calc(100% - 20px); /* Full width for each item */
+    .offers {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .offers-left, .offers-right {
+        align-items: center;
+        margin: 0;
+    }
+
+    .offers-check-btn {
+        margin: 0 auto;
     }
 }

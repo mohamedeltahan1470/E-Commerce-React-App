@@ -6,17 +6,17 @@ import Item from '../Item/Item';
 const Popular = () => {
   return (
     <div className='popular'>
-        <h1>POPULAR IN BOOKS</h1>
+        <h1>POPULAR IN T-SHIRT</h1>
         <hr />
         <div className="popular-item">
             {data_product.map((item) => (
                 <Item
-                    key={item.id} // Use item.id for a unique key
+                    key={item.id} 
                     id={item.id}
                     name={item.name}
                     image={item.image}
                     new_price={item.new_price}
-                    old_price={item.old_price} // Corrected prop name
+                    old_price={item.old_price} 
                 />
             ))}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./NewCollections.css"; // تأكد من استيراد ملف CSS
+import "./NewCollections.css"; 
 import new_collection from "../Assets/new_collections";
 import Item from '../Item/Item';
 
@@ -9,9 +9,9 @@ const NewCollections = () => {
       <h1>NEW COLLECTION</h1>
       <hr />
       <div className="collections">
-        {new_collection.map((item, i) => (
+        {new_collection.map((item) => (
           <Item 
-            key={i} 
+            key={item.id}  
             id={item.id} 
             name={item.name} 
             image={item.image} 
@@ -25,4 +25,3 @@ const NewCollections = () => {
 }
 
 export default NewCollections;
-

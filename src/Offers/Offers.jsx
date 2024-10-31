@@ -1,13 +1,10 @@
-
-
-import React from 'react';
+import React from "react";
 import "./Offers.css";
-import exclucive_image from "../Assets/books/logo.png";
-import arrow_icon from "../Assets/arrow.png"; // Include an arrow icon if needed
-import logo2 from "../Assets/books/logo2.jpeg"
+import arrow_icon from "../Assets/arrow.png";
+import logo2 from "../Assets/New folder/product_14.png";
 const Offers = () => {
   return (
-    <div className='offers'>
+    <div className="offers">
       <div className="offers-left">
         <h2>Exclusive</h2>
         <h2>Offers For You</h2>
@@ -22,6 +19,6 @@ const Offers = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Offers;

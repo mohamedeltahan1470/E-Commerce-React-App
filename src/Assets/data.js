@@ -1,30 +1,30 @@
-import p1_img from './books/images.jpg'
-import p2_img from './books/image2.webp'
-import p3_img from './books/image3.webp'
-import p4_img from './books/image4.jpg'
+import p1_img from './product_32.png'
+import p2_img from './product_33.png'
+import p3_img from './product_23.png'
+import p4_img from './product_34.png'
 
 let data_product = [
   {
     id:1,
-    name:"New Books ",
+    name:"Boys Orange Colourblocked Hooded Sweatshirt",
     image:p1_img,
     new_price:50.00,
     old_price:80.50,
   },
   {id:2,
-    name:"New Books ",
+    name:"Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     image:p2_img,
     new_price:85.00,
     old_price:120.50,
   },
   {id:3,
-    name:"New Books ",
+    name:"Boys Orange Colourblocked Hooded Sweatshirt",
     image:p3_img,
     new_price:60.00,
     old_price:100.50,
   },
   {id:4,
-    name:"New Books ",
+    name:"Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     image:p4_img,
     new_price:100.00,
     old_price:150.00,
